@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center text-dark" href="#">
+                    <i class="fa-brands fa-instagram mr-1"></i>
+                    <span class="p-2">Instagram</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item active">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-success me-4" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Create a new post
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="createnewpost">Create a new post</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="mb-2">
+                                                <label for="caption" class="form-label"><b>Caption:</b></label>
+                                                <textarea class="form-control" id="caption" rows="3"
+                                                    placeholder="Add the caption of your post here"></textarea>
+                                            </div>
+                                            <button type="button" class="btn btn-light"><i
+                                                    class="fa-solid fa-camera"></i></button>
+                                            <button type="button" class="btn btn-light"><i
+                                                    class="fa-sharp fa-solid fa-location-dot"></i></button>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-success">Publish</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <!-- Example single danger button -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="fa-solid fa-gear"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger"  href="#">Log out</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="contenido">
+        <nav>
+            <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-tablep" type="button"
+                role="tab" aria-controls="nav-home" aria-selected="true">
+                <i class="fa-solid fa-table-cells fa-lg"></i>
+              </button>
+              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-single" type="button"
+                role="tab" aria-controls="nav-profile" aria-selected="false">
+                <i class="fa-solid fa-square fa-lg"></i>
+              </button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active " id="nav-tablep" role="tabpanel" aria-labelledby="nav-tablep-tab">
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4 p-3">
+                        <img src="./imagenes/RON_SONRIENDO_BK_NEGRO_2-original.jpg" style="width: 100%; height: 100%;"/>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 p-3">
+                        <img src="./imagenes/amigos.jpg" style="width: 100%; height: 100%;"/>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 p-3">
+                        <img src="./imagenes/croacia.jpg" style="width: 100%; height: 100%;"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4 p-3">
+                        <img src="./imagenes/sonrisa.jpg" style="width: 100%; height: 100%;"/>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 p-3">
+                        <img src="./imagenes/la-torre-eiffel-con-flores-2012.jpg" style="width: 100%; height: 100%;"/>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 p-3">
+                        <img src="./imagenes/ronaldo.jpg" style="width: 100%; height: 100%;"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4 p-3">
+                        <img src="./imagenes/family.jpg" style="width: 100%; height: 100%;"/>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 p-3">
+                        <img src="./imagenes/codigo.jpg " style="width: 100%; height: 100%;"/>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 p-3">
+                        <img src="./imagenes/clase.jpg" style="width: 100%; height: 100%;"/>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-single" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="bg-light " style="width: auto; height: auto;">
+
+                    <div class="row justify-content-center">
+                      <div class=" col-12 bg-white m-3" style="width: 40%; height: auto;">
+                        <div class="header">
+                          <div class="row row-2">
+                            <div class="col-lg-6 col-sm-6 col-md-6 ps-4 pt-3">
+                              <h3><strong>My little dog Charlie</strong></h3> 
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-md-6 text-end pe-5 pt-3 text-secondary ">
+                              <p>11/11</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="imagen">
+                          <img src="./imagenes/RON_SONRIENDO_BK_NEGRO_2-original.jpg"  style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="footer">
+                          <b>25562 Likes </b>
+                          <p class="text-lg-start">Los perros no son nuestras mascotas, son nuestros mejores amigos.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class=" col-12 bg-white m-3" style="width: 40%; height: auto;">
+                          <div class="header">
+                            <div class="row row-2">
+                              <div class="col-lg-6 col-sm-6 col-md-6 ps-4 pt-3">
+                                <h3><strong>Go to the class</strong></h3> 
+                              </div>
+                              <div class="col-lg-6 col-sm-6 col-md-6 text-end pe-5 pt-3 text-secondary ">
+                                <p>16/12</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="imagen">
+                            <img src="./imagenes/amigos.jpg"  style="width: 100%; height: 100%;">
+                          </div>
+                          <div class="footer">
+                            <b>1450 Likes </b>
+                            <p class="text-lg-start">Los amigos de clase son como estrellas en el cielo escolar, iluminando nuestro camino y haciendo que cada día sea especial.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class=" col-12 bg-white m-3" style="width: 40%; height: auto;">
+                          <div class="header">
+                            <div class="row row-2">
+                              <div class="col-lg-9 col-sm-9 col-md-9 ps-4 pt-3">
+                                <h3><strong>Croatia is the best place to take a break</strong></h3> 
+                              </div>
+                              <div class="col-lg-3 col-sm-3 col-md-3 text-end pe-5 pt-3 text-secondary ">
+                                <p>09/09</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="imagen">
+                            <img src="./imagenes/croacia.jpg"  style="width: 100%; height: 100%;">
+                          </div>
+                          <div class="footer">
+                            <b>5490 Likes </b>
+                            <p class="text-lg-start">Croacia, un tesoro de encanto natural y cultural que cautiva los corazones de quienes la visitan, con sus paisajes impresionantes y su rica herencia histórica.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class=" col-12 bg-white m-3" style="width: 40%; height: auto;">
+                          <div class="header">
+                            <div class="row row-2">
+                              <div class="col-lg-6 col-sm-6 col-md-6 ps-4 pt-3">
+                                <h3><strong>Smile, best medicine</strong></h3> 
+                              </div>
+                              <div class="col-lg-6 col-sm-6 col-md-6 text-end pe-5 pt-3 text-secondary ">
+                                <p>16/07</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="imagen">
+                            <img src="./imagenes/sonrisa.jpg"  style="width: 100%; height: 100%;">
+                          </div>
+                          <div class="footer">
+                            <b>2487 Likes </b>
+                            <p class="text-lg-start">Sonreír es un lenguaje universal que trasciende barreras, un gesto que puede cambiar el rumbo de un día y llenarlo de esperanza.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class=" col-12 bg-white m-3" style="width: 40%; height: auto;">
+                          <div class="header">
+                            <div class="row row-2">
+                              <div class="col-lg-6 col-sm-6 col-md-6 ps-4 pt-3">
+                                <h3><strong>Adoro Paris...</strong></h3> 
+                              </div>
+                              <div class="col-lg-6 col-sm-6 col-md-6 text-end pe-5 pt-3 text-secondary ">
+                                <p>25/10</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="imagen">
+                            <img src="./imagenes/la-torre-eiffel-con-flores-2012.jpg"  style="width: 100%; height: 100%;">
+                          </div>
+                          <div class="footer">
+                            <b>3897 Likes </b>
+                            <p class="text-lg-start">Paris es la ciudad del amor, donde los sueños se encuentran con la realidad y la belleza se respira en cada rincón.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class=" col-12 bg-white m-3" style="width: 40%; height: auto;">
+                          <div class="header">
+                            <div class="row row-2">
+                              <div class="col-lg-8 col-sm-8 col-md-8 ps-4 pt-3">
+                                <h3><strong>Ronaldo es un CRACK!!</strong></h3> 
+                              </div>
+                              <div class="col-lg-4 col-sm-4 col-md-4 text-end pe-5 pt-3 text-secondary ">
+                                <p>28/11</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="imagen">
+                            <img src="./imagenes/ronaldo.jpg"  style="width: 100%; height: 100%;">
+                          </div>
+                          <div class="footer">
+                            <b>3491 Likes </b>
+                            <p class="text-lg-start">El fútbol es como la vida, hay momentos de alegría, tristeza, sacrificio y gloria, pero lo importante es nunca rendirse y luchar hasta el final.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class=" col-12 bg-white m-3" style="width: 40%; height: auto;">
+                          <div class="header">
+                            <div class="row row-2">
+                              <div class="col-lg-9 col-sm-9 col-md-9 ps-4 pt-3">
+                                <h3><strong>La familia es mi lugar seguro</strong></h3> 
+                              </div>
+                              <div class="col-lg-3 col-sm-3 col-md-3 text-end pe-5 pt-3 text-secondary ">
+                                <p>31/08</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="imagen">
+                            <img src="./imagenes/family.jpg"  style="width: 100%; height: 100%;">
+                          </div>
+                          <div class="footer">
+                            <b>5498 Likes </b>
+                            <p class="text-lg-start">La familia es como las ramas de un árbol, todos crecemos en diferentes direcciones, pero nuestras raíces siguen siendo las mismas.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class=" col-12 bg-white m-3" style="width: 40%; height: auto;">
+                          <div class="header">
+                            <div class="row row-2">
+                              <div class="col-lg-6 col-sm-6 col-md-6 ps-4 pt-3">
+                                <h3><strong>Codes...</strong></h3> 
+                              </div>
+                              <div class="col-lg-6 col-sm-6 col-md-6 text-end pe-5 pt-3 text-secondary ">
+                                <p>03/04</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="imagen">
+                            <img src="./imagenes/codigo.jpg"  style="width: 100%; height: 100%;">
+                          </div>
+                          <div class="footer">
+                            <b>1788 Likes </b>
+                            <p class="text-lg-start">El código es poesía para los programadores, una forma de expresión donde la lógica y la creatividad se encuentran.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class=" col-12 bg-white m-3" style="width: 40%; height: auto;">
+                          <div class="header">
+                            <div class="row row-2">
+                              <div class="col-lg-6 col-sm-6 col-md-6 ps-4 pt-3">
+                                <h3><strong>Siempre con actitud</strong></h3> 
+                              </div>
+                              <div class="col-lg-6 col-sm-6 col-md-6 text-end pe-5 pt-3 text-secondary ">
+                                <p>31/08</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="imagen">
+                            <img src="./imagenes/clase.jpg"  style="width: 100%; height: 100%;">
+                          </div>
+                          <div class="footer">
+                            <b>2088 Likes </b>
+                            <p class="text-lg-start">Estar en clase es más que asistir, es sumergirse en un océano de conocimiento, donde cada palabra y cada pregunta son oportunidades de crecimiento y descubrimiento.</p>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
